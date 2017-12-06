@@ -84,7 +84,7 @@ for _ in 1...n {
     }
 
     var resultMin = INT_MAX
-    for i in min-3...min {
+    for i in min-2...min {
         let result = arr.reduce(0) { (acc, current) in
             return acc + countTime(min: i, start: current)
         }
