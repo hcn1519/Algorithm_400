@@ -1,6 +1,6 @@
 ## Find Median
 
-Find Median from the array
+Find Median from the array.
 
 ### Input
 
@@ -23,3 +23,4 @@ Find Median from the array
 
 1. Sort the array.
 2. return `A[length/2]`
+
