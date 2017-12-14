@@ -49,7 +49,11 @@ struct ReadInput {
     }
 
 }
-
+func printArray2D(arr: [[Int]]) {
+    for i in arr {
+        print(i)
+    }
+}
 /*
 인풋 형태
 4
@@ -110,3 +114,19 @@ while g <= n-1 {
 
 print(m[1][n])
 
+
+func printMatrixMultiple(arr: [[Int]], i: Int, j: Int) {
+    if i == j {
+        print("A\(i)", terminator: "")
+    } else {
+        let k = arr[i][j]
+        print("(", terminator: "")
+        printMatrixMultiple(arr: arr, i: i, j: k)
+        printMatrixMultiple(arr: arr, i: k+1, j: j)
+        print(")", terminator: "")
+    }
+
+}
+
+printMatrixMultiple(arr: x, i: 1, j: n)
+print("")
