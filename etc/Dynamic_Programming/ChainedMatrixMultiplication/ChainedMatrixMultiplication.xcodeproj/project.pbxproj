@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		7E7572C11FD1CC2C00B48271 /* ChainedMatrixMultiplication */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ChainedMatrixMultiplication; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7572C41FD1CC2C00B48271 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7E7572CB1FD1CC3B00B48271 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +42,7 @@
 		7E7572B81FD1CC2C00B48271 = {
 			isa = PBXGroup;
 			children = (
+				7E7572CB1FD1CC3B00B48271 /* README.md */,
 				7E7572C31FD1CC2C00B48271 /* ChainedMatrixMultiplication */,
 				7E7572C21FD1CC2C00B48271 /* Products */,
 			);
