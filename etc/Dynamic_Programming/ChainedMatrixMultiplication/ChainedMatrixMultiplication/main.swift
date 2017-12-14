@@ -90,7 +90,6 @@ while g <= n-1 {
     i = 1
     while i <= n - g {
         let j = i + g
-        print("(\(i), \(j))")
 
         m[i][j] = BIGNUM
 
