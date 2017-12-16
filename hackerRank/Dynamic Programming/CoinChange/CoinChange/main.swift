@@ -6,7 +6,6 @@
 //  Copyright © 2017년 홍창남. All rights reserved.
 //
 
-// Swift 3.1
 import Foundation
 
 struct ReadInput {
