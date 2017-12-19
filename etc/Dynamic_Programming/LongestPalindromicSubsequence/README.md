@@ -13,7 +13,6 @@ BABAB
 BABAB
 ```
 
-
 ### input2
 
 ```
@@ -24,7 +23,21 @@ BBABCBCAB
 
 ```
 7
-BACBCAB
+BABCBAB
 ```
+
+### input3
+
+```
+XxyZxa
+```
+
+### output3
+
+```
+3
+xyx
+```
+
 
 ## Solution

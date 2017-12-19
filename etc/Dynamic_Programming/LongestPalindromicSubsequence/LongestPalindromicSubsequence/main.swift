@@ -116,7 +116,7 @@ func LPSString(str: String) -> String {
             result += String(reversedStr[index2])
             i -= 1
             j -= 1
-        } else if p[i-1][j] > p[i][j-1] {
+        } else if p[i-1][j] >= p[i][j-1] {
             i -= 1
         } else {
             j -= 1
