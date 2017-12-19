@@ -10,9 +10,6 @@ import Foundation
 
 let str = readLine()!
 
-enum Direction {
-    case left, bottom, bottomLeft, unknown
-}
 
 func print2DArr<T>(array: [[T]]) {
     array.forEach { print($0) }
@@ -38,9 +35,7 @@ func checkIsPalindrome(str: String) -> Bool {
 // BABAB
 // BBABCBCAB
 var p = Array(repeatElement(Array(repeatElement(0, count: str.count+1)), count: str.count+1))
-var d = Array(repeatElement(Array(repeatElement(Direction.unknown, count: str.count)), count: str.count))
 
-var arr: [String] = []
 func palindromeLength(str: String) {
 
     var reversedStr = ""
@@ -71,7 +66,6 @@ func palindromeLength(str: String) {
         }
         i += 1
     }
-    print2DArr(array: p)
 }
 
 func palindromeLength2(str: String) {
