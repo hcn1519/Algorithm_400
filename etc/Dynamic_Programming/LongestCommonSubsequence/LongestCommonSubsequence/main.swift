@@ -29,6 +29,7 @@ func print2DArr<T>(array: [[T]]) {
     array.forEach { print($0) }
 }
 
+// find LCS(Longest Common Subsequence)
 func LCSLength(string1: String, string2: String) -> Int {
 
     let s1 = " " + string1
@@ -57,6 +58,7 @@ func LCSLength(string1: String, string2: String) -> Int {
     return c[m][n]
 }
 
+// print LCS(Longest Common Subsequence)
 func LCSString(d: [[Direction]], string1: String, i: Int, j: Int) {
     if i == 0 || j == 0 {
         return
