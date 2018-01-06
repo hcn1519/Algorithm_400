@@ -13,7 +13,7 @@ public class BOJ_10844 {
     long dp[][] = new long[n+1][10];
     long mod = 1000000000;
 
-    for(int i = 0; i<=9; i++) {
+    for(int i = 1; i<=9; i++) {
       dp[1][i] = 1;
     }
 
