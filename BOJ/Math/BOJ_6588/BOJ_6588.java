@@ -4,11 +4,11 @@ public class BOJ_6588 {
   public static void main(String[] args) {
     Scanner scin = new Scanner(System.in);
 
-    boolean eratos[] = new boolean[100001];
+    boolean eratos[] = new boolean[1000001];
 
-    for(int i=2; i<100001; i++) {
+    for(int i=2; i<1000001; i++) {
         if (eratos[i] == false ) {
-          for(int j=i*i; j<100001 && i < 1000; j+=i) {
+          for(int j=i*i; j<1000001 && i < 1000; j+=i) {
               eratos[j] = true;
           }
         }
