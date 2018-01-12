@@ -66,6 +66,7 @@ func palindromeLength(str: String) {
         }
         i += 1
     }
+    print2DArr(array: p)
 }
 
 func palindromeLength2(str: String) {
