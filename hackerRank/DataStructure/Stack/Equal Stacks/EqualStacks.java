@@ -26,17 +26,34 @@ public class EqualStacks {
 
     Boolean result[][] = new Boolean[minHeight+1][3];
 
-    int finalResult = 0;
+    ArrayList<Integer> index1 = new ArrayList<>();
+    ArrayList<Integer> index2 = new ArrayList<>();
+
     for(int i = minHeight; i > 0; i--) {
+        result[i][0] = canReachable(i, s[0], h[0]);
+        if (result[i][0]) {
+            index1.add(i);
+        }
+    }
 
-      for(int k=0; k< 3; k++) {
-        result[i][k] = canReachable(i, s[k], h[k]);
-      }
+    for(int i = 0; i<index1.size(); i++) {
+        if (result[index1.get(i)][0]) {
+            result[i][1] = canReachable(i, s[1], h[1]);
+        }
+        if (result[i][1]) {
+            index2.add(index1.get(i));
+        }
+    }
 
-      if (result[i][0] && result[i][1] && result[i][2]) {
-        finalResult = i;
-        break;
-      }
+    int finalResult = 0;
+    for(int i = 0; i<index2.size(); i++) {
+        if (result[index2.get(i)][0]) {
+            result[i][2] = canReachable(i, s[2], h[2]);
+        }
+        if (result[i][2]) {
+            finalResult = index2.get(i);
+            break;
+        }
     }
 
     System.out.println(finalResult);
@@ -47,27 +64,16 @@ public class EqualStacks {
           return true;
         }
 
-        Queue<Integer> temp = new LinkedList<>();
+        Stack<Integer> temp = (Stack<Integer>)st.clone();
 
-        while(!st.empty()) {
-          int x = st.pop();
-          temp.add(x);
+        while(!temp.empty()) {
+          int x = temp.pop();
           h -= x;
-
           if (h < destination) {
-            while(!temp.isEmpty()) {
-              st.push(temp.poll());
-            }
             return false;
           } else if (h == destination) {
-            while(!temp.isEmpty()) {
-              st.push(temp.poll());
-            }
             return true;
           }
-        }
-        while(!temp.isEmpty()) {
-          st.push(temp.poll());
         }
         return false;
   }
